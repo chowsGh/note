@@ -1,0 +1,18 @@
+##[TortoiseSVN与VisualSVN Server搭建SVN版本控制系统](https://www.cnblogs.com/xing901022/p/4399382.html)
+##[svn版本管理](https://www.cnblogs.com/lpfuture/p/5853030.html)
+##[代码版本管理](http://blog.csdn.net/mycwq/article/details/51793847)
+
+- 百灵K歌代码 版本管理迁移 eclipse 实现
+  1. 创建trunk 三个文件
+  2. 将整个项目 branch 到 trunk 文件夹内的新项目文件夹例如 larko-epg-h5.
+  3. 删除trunk 文件夹以外的其他文件夹
+  4. 创建 tags, branches文件夹
+  5. 进入 eclipse import trunk 文件夹内的主线版本代码
+  6. branch 分支 到branches/{{branchName}}
+  7. 这个时候就可以 使用eclipse switch 来切换了
+- 代码管理
+  1. 创建开发环境分支，在功能完成后，合并到主线，并打上tag 到svn的tags 目录下。
+  2. 创建发布环境分支，
+- 建议每天写日报
+  - 写日报会带来什么好处？
+  - 写日报会有什么代价？

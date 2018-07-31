@@ -1,0 +1,57 @@
+算法在实现逻辑的时候需要考虑内存空间，执行时间，算法时间复杂度以及空间复杂度即时间和空间。
+
+- 几种常用排序
+  - 快排
+  - 合并排序
+  - 冒泡排序
+  - 选择排序
+  - 堆排序
+- 几种常用的排序需要的时间和空间复杂度
+- [五大常用算法：分治、动态规划、贪心、回溯和分支界定](http://blog.csdn.net/yake827/article/details/52119469)
+- [程序设计与算法（二）算法基础](https://www.icourse163.org/learn/PKU-1001894005?tid=1002445041#/learn/content?type=detail&id=1003305245&sm=1)
+- 分治，分而治之，将复杂问题分解成小问题，求解小问题并将结果合并。
+    - 归并算法
+    - 快速排序
+- 动态规划
+  - 减少重复计算，需要保存计算结果以减少重复计算
+- 深度优化搜索
+- 广度优先搜索
+- 二分查找
+
+- 尾递归(http://baike.sogou.com/v162175.htm?fromTitle=%E5%B0%BE%E9%80%92%E5%BD%92)
+  - 线性递归:
+    ```
+　　long Rescuvie(long n) {
+　　return(n == 1) ? 1 : n * Rescuvie(n - 1);
+　　}
+　　尾递归:
+　　long TailRescuvie(long n, long a) {
+　　return(n == 1) ? a : TailRescuvie(n - 1, a * n);
+　　}
+　　long TailRescuvie(long n) {//封装用的
+　　return(n == 0) ? 1 : TailRescuvie(n, 1);
+　　}
+　　当n = 5时
+　　对于线性递归, 他的递归过程如下:
+　　Rescuvie(5)
+　　{5 * Rescuvie(4)}
+　　{5 * {4 * Rescuvie(3)}}
+　　{5 * {4 * {3 * Rescuvie(2)}}}
+　　{5 * {4 * {3 * {2 * Rescuvie(1)}}}}
+　　{5 * {4 * {3 * {2 * 1}}}}
+　　{5 * {4 * {3 * 2}}}
+　　{5 * {4 * 6}}
+　　{5 * 24}
+　　120
+　　对于尾递归, 他的递归过程如下:
+　　TailRescuvie(5)
+　　TailRescuvie(5, 1)
+　　TailRescuvie(4, 5)
+　　TailRescuvie(3, 20)
+　　TailRescuvie(2, 60)
+　　TailRescuvie(1, 120)
+　　120
+　　很容易看出, 普通的线性递归比尾递归更加消耗资源, 在实现上说, 每次重复的过程
+　　调用都使得调用链条不断加长. 系统不得不使用栈进行数据保存和恢复.而尾递归就
+　　不存在这样的问题, 因为他的状态完全由n和a保存.
+    ```

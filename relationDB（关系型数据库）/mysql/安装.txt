@@ -1,0 +1,46 @@
+1. 下载zip
+2. 解压
+3. 编写 my.ini/my.cnf
+```
+[mysql]
+
+# 设置mysql客户端默认字符集
+
+default-character-set=utf8
+
+[mysqld]
+
+#设置3306端口
+
+port = 3306
+
+# 设置mysql的安装目录
+
+basedir="J:\DevelopmentTool\mysql-5.7.21-winx64"
+
+# 设置mysql数据库的数据的存放目录
+
+datadir="J:\DevelopmentTool\mysql-5.7.21-winx64\data"
+
+# 允许最大连接数
+
+max_connections=200
+
+# 服务端使用的字符集默认为8比特编码的latin1字符集
+
+character-set-server=utf8
+
+# 创建新表时将使用的默认存储引擎
+
+default-storage-engine=INNODB
+```
+4. mysqld --initialize
+5. 查看data 目录下 .err 文件中临时生成的密码
+2018-04-13T02:02:47.489909Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2018-04-13T02:02:51.368130Z 0 [Warning] InnoDB: New log files created, LSN=45790
+2018-04-13T02:02:52.382188Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.
+2018-04-13T02:02:52.839215Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: c66ac2d8-3ebe-11e8-ba28-005056c00001.
+2018-04-13T02:02:52.895218Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2018-04-13T02:02:52.955221Z 1 [Note] A temporary password is generated for root@localhost: <wjKw2+n3_f+
+6. mysql -u root -p
+7. ALTER USER 'root'@'localhost' IDENTIFIED BY 'new password'

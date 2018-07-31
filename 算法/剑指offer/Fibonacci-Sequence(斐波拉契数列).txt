@@ -1,0 +1,19 @@
+# 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项。条件: n<=39
+```
+public class Solution {
+    public int Fibonacci(int n) {
+        int temp1 = 0;
+        int temp2 = 1;
+        //0, 1, 2, 3
+        //0, 1(0, 1), 1(0, 1), 2(1, 1)
+        while(n > 0) {
+            temp2 = temp1 + temp2;
+            temp1 = temp2 - temp1;
+            n--;
+        }
+        return temp1;
+    }
+}
+```
+- 可以使用动态规划的方式。
+- 需要注意的是 如果用递归，可能会造成stack overflow。

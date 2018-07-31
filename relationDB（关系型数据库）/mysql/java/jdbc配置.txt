@@ -1,0 +1,4 @@
+# [官方文档](https://dev.mysql.com/doc/connector-j/5.1/en/)
+MySQL provides connectivity for client applications developed in the Java programming language with MySQL Connector/J, a driver that implements the Java Database Connectivity (JDBC) API.
+mysql JDBC URL格式如下：
+jdbc:mysql://[host:port],[host:port].../[database][?参数名1][=参数值1][&参数名2][=参数值2]...

@@ -1,0 +1,13 @@
+[TOC]
+# [官方文档](https://dev.mysql.com/doc/refman/5.7/en/charset.html)
+## Character Sets(编码集) and Collations（字符顺序） in General
+编码集是字符符号和编码的映射表，字符顺序是字符的顺序例如：bin按二进制编码顺序，ci字符大小写非敏感，cs字符大小写敏感。
+
+## 设置编码集以及字符顺序
+数据库以及客户端如果编码集不匹配就会出现乱码问题，所以需要在数据库和客户端设置相同的编码集。
+
+### 数据库
+
+### 客户端
+
+### [解决emoji 编码问题](https://segmentfault.com/a/1190000000616820)

@@ -1,0 +1,27 @@
+- 洗牌算法
+  - [shuffle 随机排序算法](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+  - [中文翻译](https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/#top)
+```
+//js 实现， 原理是每次随机生成一个数组的下标，
+然后将该下标的元素和第 i 个元素交换，下次生成的下标在0到i。
+Array.prototype.shuffle = function() {
+    var input = this;
+    for (var i = input.length-1; i >=0; i--) {
+        var randomIndex = Math.floor(Math.random()*(i+1));
+        var itemAtIndex = input[randomIndex];
+        input[randomIndex] = input[i];
+        input[i] = itemAtIndex;
+    }
+    return input;
+}
+function shuffle(input) {
+for(var i = input.length - 1; i >= 0; i--) {
+  var randomIndex = Math.floor(Math.random()*(i+1));
+  //交换 随机下标的元素  和 i 个元素
+  var itemRandomedIndex = input[randomIndex];
+  input[randomIndex] = input[i];
+  input[i] = itemRandomedIndex;
+  return input;
+}
+}
+```

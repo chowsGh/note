@@ -1,0 +1,2 @@
+# MHA（Master High Availability）目前在MySQL高可用方面是一个相对成熟的解决方案，
+# [参考](http://www.ttlsa.com/mysql/step-one-by-one-deploy-mysql-mha-cluster/)

@@ -1,0 +1,2 @@
+# 抓日志
+adb logcat -v threadtime > D:/logs/1.txt

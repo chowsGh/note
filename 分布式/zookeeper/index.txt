@@ -1,0 +1,7 @@
+# 2018-07-29 研究问题
+- 什么是zookeeper
+- zookeeper 用来做什么，解决什么问题
+- zookeeper 应用场景
+- zookeeper 部署相关（安装，配置，运行，工具）
+- zookeeper 开发
+- zookeeper 相关技术
