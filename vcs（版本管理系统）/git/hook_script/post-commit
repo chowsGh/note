@@ -1,0 +1,24 @@
+#!/bin/sh
+
+projectName="study-note"
+basePath="/f/git_repository/gitee/"
+tarPath="/f/git_repository/"${projectName}".tar"
+githubPath="/f/git_repository/github"
+
+#压缩项目路径
+cd ${basePath}
+tar -czvf ${tarPath} --exclude=.git ${projectName}
+#删除github里面
+if [ ! -d ${githubPath}"/"${projectName} ]; then
+mkdir ${githubPath}"/"${projectName}
+fi
+
+cd ${githubPath}"/"${projectName}
+pwd
+ls
+rm -rf `ls | grep -v ".git"`
+tar -zxvf ${tarPath} -C ${githubPath}
+git add --all
+git commit -m 'gitee commited.'
+git push
+echo 'finished'
