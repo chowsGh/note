@@ -11,6 +11,7 @@ ZooKeeper入门指南
 在单机模式下设置ZooKeeper服务器非常简单。服务器包含在单个JAR文件中，因此安装包括创建配置。
 一旦你下载了一个稳定的ZooKeeper版本，
 要启动ZooKeeper，您需要一个配置文件。这是一个示例，在conf / zoo.cfg中创建它：
+
 ```
 tickTime=2000
 # windows dataDir 不能使用反斜杠（\）
@@ -40,7 +41,9 @@ $ bin/zkCli.sh -server 127.0.0.1:2181
 # windows
 bin/zkCli.cmd -server 127.0.0.1:2181
 ```
+
 相关命令
+
 ```
 ZooKeeper -server host:port cmd args
         stat path [watch]
@@ -65,19 +68,23 @@ ZooKeeper -server host:port cmd args
         close
         connect host:port
 ```
+
 - ls 您可以尝试一些简单的命令来感受这个简单的命令行界面。首先，从发出list命令开始，如在ls中，产生：
+
 ```
 [zkshell: 8] ls /
 [zookeeper]
 ```
 
 - create 创建一个新的znode
+
 ```
 [zkshell: 9] create /zk_test my_data
 Created /zk_test
 ```
 
 - get 通过运行get命令验证数据是否与znode相关联，如下所示：
+
 ```
 [zkshell：12] get / zk_test
 my_data
@@ -95,6 +102,7 @@ numChildren = 0
 ```
 
 - set 我们可以通过发出set命令来更改与zk_test相关的数据，如下所示：
+
 ```
 [zkshell：14] set / zk_test垃圾
 cZxid = 5
@@ -125,15 +133,15 @@ numChildren = 0
 ```
 
 - delete 最后，让我们通过发出以下命令删除节点：
+
 ```
 [zkshell：16] delete / zk_test
 [zkshell：17] ls /
-[动物园管理员]
-[zkshell：18]
 ```
 
 ## 运行ZooKeeper集群
 在单机模式下运行ZooKeeper便于评估，开发和测试。但在生产中，您应该以Replicated 模式运行ZooKeeper。同一应用程序中的复制服务器组称为仲裁(quorum)，在Replicated模式下，仲裁(quorum)中的所有服务器都具有相同配置文件的副本。
+
 > 对于复制(Replicated)模式，至少需要三台服务器，强烈建议您使用奇数个服务器。如果您只有两台服务器，那么您处于这样的情况：如果其中一台服务器出现故障，则没有足够的机器来构成多数仲裁。两台服务器本质上 不如 单一服务器稳定，因为有两个单点故障。
 
 ```
