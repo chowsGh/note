@@ -5,6 +5,7 @@
 
 #简介
 [Git](https://git-scm.com)
+
 ```
 1）/mtk/               过滤整个文件夹
 2）*.zip                过滤所有.zip文件
@@ -155,7 +156,7 @@ git tag [-a | -s | -u <keyid>] [-f] [-m <msg> | -F <file>]
 5. 查看所有分支信息			git branch -a
 
 ## 变基 rebase
-- 格式 ：git rebase [basebranch] [topicbranch]
+- 格式 ：git rebase ${basebranch} ${topicbranch}
 - 总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作，这样，你才能享受到两种方式带来的便利。
 - In general the way to get the best of both worlds is to rebase local changes you’ve made but haven’t shared yet before you push them in order to clean up your story, but never rebase anything you’ve pushed somewhere.
 
@@ -166,19 +167,22 @@ git tag [-a | -s | -u <keyid>] [-f] [-m <msg> | -F <file>]
 - 推送到某个分支:git push origin ${branch}
 - 推送一个在远程仓库不存在的分支:git push --set-upstream origin ${branch}
 - 删除远程分支:git push origin --delete ${branch}
+- 选择默认分支，以后可以直接使用git push 了。git push -u orgin master 
 
 #**show**
 - git show ${tag|branch|commit|HEAD} 显示详细信息
 
 ## Git on server
 - [生成SSH key](https://www.git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5)
+
 - [Server上搭建Git](https://www.git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BA-Git)
+
 - [服务器上的 Git - GitLab](https://www.git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-GitLab)
+
 - [服务器上面部署中央版本管理](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000)
+
 - [GitLab官网](https://gitlab.com/gitlab-org/gitlab-ce/tree/master)。但是只能运行在linux上。
 
-
-
-- git server
-	- [gitblit](http://blog.csdn.net/hbtflying/article/details/52318691?locationNum=14)
-	- gitolite
+- git server  
+- [gitblit](http://blog.csdn.net/hbtflying/article/details/52318691?locationNum=14)
+- gitolite
