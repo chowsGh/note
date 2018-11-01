@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#需要github建立了仓库，pull到本地，然后设置本地路径
 projectName="study-note"
 basePath="/f/git_repository/gitee/"
 tarPath="/f/git_repository/"${projectName}".tar"

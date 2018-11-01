@@ -1,0 +1,5 @@
+win10 
+安全中心
+	gpedit.msc->计算机配置->管理模版->windows组件->windows defender 防病毒程序
+家庭组
+	服务-> home group listener/provider 属性/禁用	
