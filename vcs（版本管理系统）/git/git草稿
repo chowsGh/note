@@ -1,0 +1,60 @@
+安装/运行/配置
+email 
+
+
+查看帮助
+
+git {command} --help
+
+
+
+
+
+添加远程仓库方式
+ssh协议 
+需要在远程仓库配置本地公钥
+
+https协议
+提交需要账号密码
+
+
+
+TotoriseGit 使用简介
+使用ssh 远程协作，配置私钥，或者选择 git ssh作为ssh客户端
+git clone 
+git add file
+git commit 
+git commit -amend
+git fetch
+git pull --no-commit
+git fetch followed by git merge FETCH_HEAD
+
+git push
+储藏 stash
+将跟踪（tracked）的文件内容保存，恢复工作区，暂存区未HEAD的内容，然后可以通过pop 或者apply恢复
+
+使用方法：
+
+保存内容到储藏区 git stash (save) -u(未跟踪的文件即新增或者删除没有git add的文件) | --all(忽略文件页添加)
+查看储藏区内容 git stash list 
+恢复储藏内容
+git stash pop {stash@{2}}  弹出并删除储藏区内容
+git stash apply {stash@{2}} 恢复但是不删除储藏区内容
+删除储藏内容
+
+
+清理
+
+clean -n
+
+clean -f 
+
+
+
+清理恢复
+
+git reset 
+
+git revert 
+
+git checkout 
