@@ -1,3 +1,10 @@
+1. 原svn开发方式，不提交到本地，要提交前先git stash -u ，git pull, 然后git stash apply, 手动更改冲突，git push
+2. 本地使用develp分支，提交master先pull，是版本是最新的，然后merge develop 然后在push
+
+合并主干commit
+$ git fetch origin
+$ git rebase origin/master
+
 git 不是增量记录文件，是快照形式的，每当文件更新，git会对这个文件进行快照，每个commit 就是快照的集合。当与远程库有冲突，在进行一次merge然后
 生成一个commit, 这个mergeCommit 会直接push 到远程库
 安装/运行/配置
