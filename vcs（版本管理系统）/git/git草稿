@@ -58,3 +58,5 @@ git reset
 git revert 
 
 git checkout 
+
+TortoiseGit 远程本地比对  fetch 后 git log 比对
