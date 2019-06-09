@@ -1,3 +1,10 @@
+类svn 工作流
+git clone
+ git add . git commit
+git pull --rebase,可能有冲突需要手动合并冲突
+git push
+
+
 1. 原svn开发方式，不提交到本地，要提交前先git stash -u ，git pull, 然后git stash apply, 手动更改冲突，git push
 2. 本地使用develp分支，提交master先pull，是版本是最新的，然后merge develop 然后在push
 
